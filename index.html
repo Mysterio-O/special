@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tell me who are YOU</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playwrite+IT+Moderna:wght@100..400&display=swap" rel="stylesheet">
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <section id="identity-section" class="mt-10 container mx-auto bg-black flex justify-center flex-col items-center">
+        <h1 class="text2xl font-semibold mb-4 text-center mb-10 text-4xl text-white">Let me know who You are</h1>
+        <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+            <div class="card-body">
+                <fieldset class="fieldset">
+                    <legend class="fieldset-legend text-white text-lg mb-3 text-center">Select Gender</legend>
+                    <select id="gender-select" class="select border-none rounded-3xl" required>
+                        <option disabled selected class="text-center">Select Gender</option>
+                        <option value="Female" class="text-center">Female</option>
+                        <option value="Male" class="text-center">Male</option>
+                    </select>
+                </fieldset>
+                <fieldset class="fieldset">
+                    <label class="fieldset-label text-white text-sm font-bold">Name:</label>
+                    <input id="name" type="text" class="input border-none rounded-3xl text-center" placeholder="Enter Your sweet name" required />
+                    <label class="fieldset-label text-white text-sm font-bold">Age:</label>
+                    <input id="age" type="number" class="input border-none rounded-3xl text-center" placeholder="You look pretty, how old are you" required />
+                    <button id="go-btn" class="btn btn-neutral mt-4 bg-white rounded-3xl border-none text-black text-2xl">Go Ahead!</button>
+                </fieldset>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const btn = document.getElementById('go-btn');
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            const name = document.getElementById("name").value;
+            const gender = document.getElementById('gender-select').value;
+            const age = document.getElementById('age').value;
+            const convertedAge = parseFloat(age);
+
+            if (gender && age) {
+                if (gender === 'Female') {
+                    if (convertedAge < 30) {
+                        localStorage.setItem('userName', name); // Store the name in localStorage
+                        alert(`Welcome ${name}`);
+                        window.location.href = './main.html'; // Redirect to the second page
+                    } else {
+                        alert('Boyosh ektu beshi hoiye gelo na?');
+                    }
+                } else {
+                    alert('Only Girls here, Fuck off');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

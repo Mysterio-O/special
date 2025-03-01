@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You..</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playwrite+IT+Moderna:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body class="bg-gradient-to-r from-cyan-500 to-blue-500">
+    <section class="h-96 flex flex-col gap-16 justify-center items-center">
+        <div>
+            <h1 id="main-text" class="text-7xl text-[#7886C7] font-extrabold kanit-extrabold">Click on the button</h1>
+        </div>
+        <!-- Button Div -->
+        <div class="button-wrapper">
+            <button id="congo-btn" class="futuristic-button">
+                <span class="playwrite-it-moderna text-[#000957] font-extrabold">Congratulation!</span>
+            </button>
+        </div>
+    </section>
+
+    <script>
+        const userName = localStorage.getItem('userName');
+
+        document.getElementById('congo-btn').addEventListener('click', function () {
+            const mT = document.getElementById('main-text');
+            const nT = `I  Love You🌸🫶🏻${userName} !!`;
+            mT.innerText = nT;
+        });
+    </script>
+</body>
+</html>

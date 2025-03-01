@@ -1,0 +1,181 @@
+.playwrite-it-moderna {
+    font-family: "Playwrite IT Moderna", serif;
+    font-optical-sizing: auto;
+}
+
+.kanit-regular {
+    font-family: "Kanit", serif;
+    font-style: normal;
+}
+
+.kanit-extralight {
+    font-family: "Kanit", serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.kanit-light {
+    font-family: "Kanit", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.kanit-regular {
+    font-family: "Kanit", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.kanit-medium {
+    font-family: "Kanit", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.kanit-semibold {
+    font-family: "Kanit", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.kanit-bold {
+    font-family: "Kanit", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.kanit-extrabold {
+    font-family: "Kanit", serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.kanit-black {
+    font-family: "Kanit", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.kanit-thin-italic {
+    font-family: "Kanit", serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.kanit-extralight-italic {
+    font-family: "Kanit", serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.kanit-light-italic {
+    font-family: "Kanit", serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.kanit-regular-italic {
+    font-family: "Kanit", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.kanit-medium-italic {
+    font-family: "Kanit", serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.kanit-semibold-italic {
+    font-family: "Kanit", serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.kanit-bold-italic {
+    font-family: "Kanit", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.kanit-extrabold-italic {
+    font-family: "Kanit", serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.kanit-black-italic {
+    font-family: "Kanit", serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+
+
+
+
+/* Button Wrapper */
+.button-wrapper {
+    position: relative;
+}
+
+/* Button Styling */
+.futuristic-button {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, #a500ff, #5e00ff);
+    border: none;
+    padding: 15px 60px;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+    clip-path: polygon(5% 0%, 95% 0%, 100% 30%, 100% 100%, 10% 100%, 0% 70%);
+    transition: 0.3s;
+    box-shadow: 0px 0px 20px rgba(165, 0, 255, 0.9);
+    overflow: hidden;
+}
+
+/* Neon Border */
+.futuristic-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    clip-path: polygon(5% 0%, 95% 0%, 100% 30%, 100% 100%, 10% 100%, 0% 70%);
+}
+
+/* Sci-Fi Edge Cut Stripes */
+.futuristic-button::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 50px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.5);
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+}
+
+/* Hover Effects */
+.futuristic-button:hover {
+    background: linear-gradient(90deg, #c300ff, #7700ff);
+    box-shadow: 0px 0px 25px rgba(195, 0, 255, 1);
+    transform: scale(1.05);
+}
+
+/* Glow Animation */
+@keyframes glow {
+    0% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.futuristic-button::before {
+    animation: glow 1.5s infinite alternate;
+}
