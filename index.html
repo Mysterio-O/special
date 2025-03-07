@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,59 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playwrite+IT+Moderna:wght@100..400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playwrite+IT+Moderna:wght@100..400&display=swap"
+        rel="stylesheet">
     <!-- DaisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .marquee {
+            height: 60px;
+            margin: 30px auto;
+            overflow: hidden;
+            position: relative;
+            border-radius: 1rem;
+        }
+
+        .marquee>div {
+            display: block;
+            width: 300%;
+            height: 45px;
+            position: absolute;
+            overflow: hidden;
+            animation: marquee 17s 2ms infinite;
+            text-align: center;
+            font-size: 1.5rem;
+            background-color: rgba(242, 232, 255, 1);
+            padding: 7px;
+        }
+
+        .marquee>span {
+            float: right;
+            width: 100%;
+        }
+
+        @keyframes marquee {
+            0% {
+                right: 0;
+            }
+
+            100% {
+                right: -120%;
+            }
+        }
+    </style>
 </head>
+
 <body>
+    <div class="marquee lg:w-[1160px] max-w-96">
+        <div>
+            <span class="font-bold font-black">Only for <span class="text-pink-600">Sundories!!</span></span>
+        </div>
+    </div>
     <section id="identity-section" class="mt-10 container mx-auto bg-black flex justify-center flex-col items-center">
         <h1 class="text2xl font-semibold mb-4 text-center mb-10 text-4xl text-white">Let me know who You are</h1>
         <div class="card w-full max-w-sm shrink-0 shadow-2xl">
@@ -29,10 +75,14 @@
                 </fieldset>
                 <fieldset class="fieldset">
                     <label class="fieldset-label text-white text-sm font-bold">Name:</label>
-                    <input id="name" type="text" class="input border-none rounded-3xl text-center" placeholder="Enter Your sweet name" required />
+                    <input id="name" type="text" class="input border-none rounded-3xl text-center"
+                        placeholder="Enter Your sweet name" required />
                     <label class="fieldset-label text-white text-sm font-bold">Age:</label>
-                    <input id="age" type="number" class="input border-none rounded-3xl text-center" placeholder="You look pretty, how old are you" required />
-                    <button id="go-btn" class="btn btn-neutral mt-4 bg-white rounded-3xl border-none text-black text-2xl">Go Ahead!</button>
+                    <input id="age" type="number" class="input border-none rounded-3xl text-center"
+                        placeholder="You look pretty, how old are you" required />
+                    <button id="go-btn"
+                        class="btn btn-neutral mt-4 bg-white rounded-3xl border-none text-black text-2xl">Go
+                        Ahead!</button>
                 </fieldset>
             </div>
         </div>
@@ -63,4 +113,5 @@
         });
     </script>
 </body>
+
 </html>
